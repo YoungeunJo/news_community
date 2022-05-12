@@ -25,7 +25,7 @@
 
 ## ⏲  Project duration
 <p>2022. 05. 06 - 2022. 05. 12</p>
-
+<br/>
 
 ## 🧙 Crew
 - :lipstick: Front-end
@@ -38,7 +38,8 @@
   - Hyun-jun Moon
 - 🏠 Architect
   - Chanhyeok choi
-
+<br/>
+  - 
 ## 📌 Main Features
 #### [Login/Register] 
 - Sign up
