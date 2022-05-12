@@ -39,7 +39,7 @@
 - 🏠 Architect
   - Chanhyeok choi
 <br/>
-  - 
+ 
 ## 📌 Main Features
 #### [Login/Register] 
 - Sign up
