@@ -20,7 +20,7 @@
 
 ## 🏠 About project
 - This News Community provides a summary of Naver sports news using CLOVA Summary, a text summarization API.</br>
-- Feel free to express your thoughts on sports news!
+- Feel free to express your thoughts on sports news without any burden to read full news articles!
 <br/>
 
 ## ⏲  Project duration
