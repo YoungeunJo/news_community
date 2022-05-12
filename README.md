@@ -9,10 +9,9 @@
       <img src="https://img.shields.io/badge/GitHub Actions-grey?style=flat-square&logo=GitHub Actions"/>
       <img src="https://img.shields.io/badge/Bulma-grey?style=flat-square&logo=bulma"/>
 </p>
-
-### News Community
-#### by Team Harmony
-Summer Project in 2022
+<h2>News Community</h2>
+<h4>by Team Harmony</h4>
+<p> • Summer Project in 2022 •</p>
 
   <p>
     <img src="https://user-images.githubusercontent.com/68278903/167773592-0153f6d8-f187-4fbf-b747-088b864d2785.jpg" width="300px" />
@@ -22,11 +21,11 @@ Summer Project in 2022
 ### 🏠 About project
 This News community developed by Team Harmony provides a summary of Naver sports news using CLOVA Summary, a text summarization API.</br>
 You can read summarised sports news on a daily basis. And you can express your thoughts freely on each article that you are interested.
-
-
+<br/>
+<br/>
 ### ⏲  Project duration
 <p>2022. 05. 06 - 2022 05. 12</p>
-
+<br/>
 
 ### 🧙 Crew
 - :lipstick: Front-end
@@ -39,17 +38,18 @@ You can read summarised sports news on a daily basis. And you can express your t
   - Hyun-jun Moon
 - 🏠 Architect
   - Chanhyeok choi
-
+<br/>
+<br/>
 
 ### 📌 Main Features
-#### Login/Register - 
+#### [Login/Register] 
 - Sign up
 - JWT based login
 - Validation function
 - Protection from XSS Attack
 - Protection from CSRF Attack
 
-#### Profile Admin -
+#### [Profile Admin]
 - Uploading profile img  
 - Modification of nickname, profile img and introduction message.
 - Collection of bookmarked news
@@ -57,7 +57,7 @@ You can read summarised sports news on a daily basis. And you can express your t
 - Protection from XSS Attack
 - Protection from CSRF Attack
 
-#### Detail -
+#### [Detail] 
 - Providing a summarized news
 - Leaving a comment
 - Deleting comments
