@@ -49,7 +49,7 @@ You can read summarised sports news on a daily basis. And you can express your t
 - Protection from XSS Attack
 - Protection from CSRF Attack
 
-#### [Profile Admin]
+#### [Profile Admin] 
 - Uploading profile img  
 - Modification of nickname, profile img and introduction message.
 - Collection of bookmarked news
