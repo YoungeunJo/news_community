@@ -9,9 +9,10 @@
       <img src="https://img.shields.io/badge/GitHub Actions-grey?style=flat-square&logo=GitHub Actions"/>
       <img src="https://img.shields.io/badge/Bulma-grey?style=flat-square&logo=bulma"/>
 </p>
-<p style="font-size: x-large; font-weight: bold">News Community</p>
-<h4>by Team Harmony</h4>
-<p>Summer Project in 2022</p>
+
+## News Community
+#### by Team Harmony</h4>
+Summer Project in 2022
 
   <p>
     <img src="https://user-images.githubusercontent.com/68278903/167773592-0153f6d8-f187-4fbf-b747-088b864d2785.jpg" width="300px" />
