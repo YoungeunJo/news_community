@@ -11,6 +11,10 @@ def detail(post_id):
 
 @detail_page.route('/comment', methods=['POST'])
 def save_comment():
+    """
+    클라이언트로부터 댓글 내용, 작성 시간, 포스트 아이디를 받아서 디비에 저장
+    :return: 댓글 저장
+    """
     comment_receive = request.form['comment_give']
     date_receive = request.form["date_give"]
     id_receive = request.form["id_give"]
@@ -18,8 +22,11 @@ def save_comment():
 
 @detail_page.route('/comment/delete', methods=['POST'])
 def delete_comment():
+    """
+    댓글 식별용 인덱스를 받아서 해당되는 댓글을 DB에서 삭제
+    :return: 댓글 삭제
+    """
     comment_idx_receive = request.form['comment_idx_give']
-    # comment_user_id_receive = request.form['comment_user_id_give']
     return DetailControl.delete_comment(comment_idx_receive)
 
 @detail_page.route('/like_update', methods=['POST'])
