@@ -45,14 +45,16 @@ function post_comment() {
     })
 }
 
+// 댓글을 삭제하기 전 한 번 더 물어보게 하기 위한 자바스크립트 내장 confirm 함수 사용
 function delete_confirm(comment_idx) {
     if (confirm('정말로 삭제하시겠습니까?')) {
-        delete_comment(comment_idx)
+        delete_comment(comment_idx)  // 확인 누르면 댓글 삭제
     } else {
-        return false
+        return false  // 취소 누르면 아무런 일도 일어나지 않음
     }
 }
 
+// 댓글 삭제 함수
 function delete_comment(comment_idx) {
     $.ajax({
         type: "POST",
@@ -123,6 +125,7 @@ function comments_get(user_id, post_id, sorting_status_eng) {
                     let count = num2str(comment["count_like"])
                     let icon = comment['like_by_me'] ? "fa-heart" : "fa-heart-o"
                     let temp_html = ''
+                    // 자기가 쓴 댓글인 경우에는 삭제 버튼이 보이는 temp_html 구성 그렇지 않은 경우에는 삭제 버튼 안 보이게 temp_html 구성
                     if (comment['mine'] == true) {
                         temp_html = `<div class="box" id="${comment["_id"]}">
                                         <article class="media">
