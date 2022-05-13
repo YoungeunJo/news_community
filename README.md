@@ -19,8 +19,8 @@
 </div>
 
 ### 🏠 About project
-This News community developed by Team Harmony provides a summary of Naver sports news using CLOVA Summary, a text summarization API.</br>
-You can read summarised sports news on a daily basis. And you can express your thoughts freely on each article that you are interested.
+News Community provides a summary of Naver sports news using CLOVA Summary, a text summarization API.
+Feel free to express your thoughts on sports news without any burden to read full news articles!
 <br/>
 <br/>
 ### ⏲  Project duration
