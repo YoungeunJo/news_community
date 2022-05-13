@@ -97,7 +97,7 @@ class Posts():
         return view
 
 
-class AboutComment:
+class AboutComment:  # detail_control에서 사용
     @staticmethod
     def comment_find(key, value):
         return db.comments.find_one({key: value})
