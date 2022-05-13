@@ -6,6 +6,7 @@ from operator import itemgetter
 import jwt
 from dev_module.xss_protect import xss_protect
 
+
 class DetailControl():
     @staticmethod
     def detail_render(post_id):
@@ -31,11 +32,19 @@ class DetailControl():
 
     @staticmethod
     def save_comment(comment_receive, date_receive, id_receive):
+        """ -hj
+        댓글 저장
+        :param comment_receive: 클라이언트에서 작성한 댓글 내용
+        :param date_receive: 댓글 작성 시간
+        :param id_receive: 댓글을 달려고 하는 post의 id
+        :return: DB에 댓글 저장
+        """
         # 토큰으로 유저 정보 가져오기
         token_receive = request.cookies.get('mytoken')
         payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
         user_info = UserAdmin.users_find_one("user_id", payload["id"])
 
+        # DB에 comment 저장 시 comment 식별용 아이디로 사용될 index 구성
         if DetailContents.count_all_comments == 0:
             max_value = 1
         else:
@@ -56,11 +65,18 @@ class DetailControl():
 
     @staticmethod
     def delete_comment(comment_idx_receive):
+        """ -hj
+        댓글 삭제
+        :param comment_idx_receive: 댓글을 작성할 때마다 댓글에 부여되는 댓글 식별용 인덱스
+        :return: DB에서 댓글 삭제
+        """
         token_receive = request.cookies.get('mytoken')
         payload = jwt.decode(token_receive, SECRET_KEY, algorithms=['HS256'])
         user_info = UserAdmin.users_find_one("user_id", payload["id"])  # 유저 회원 정보 데이터 불러오기
 
-        comment = AboutComment.comment_find('idx', int(comment_idx_receive))  # user_id로 코멘트 데이터 불러오기
+        comment = AboutComment.comment_find('idx', int(comment_idx_receive))  # 코멘트 인덱스로 댓글 데이터 불러오기
+
+        # 코멘트를 작성한 유저 아이디와 현재 로그인 되어있는 아이디 비교해서 일치할 때만 댓글 삭제 가능
         if comment['user_id'] == user_info['user_id']:
             DetailContents.delete_comment(comment_idx_receive)
             return jsonify({'msg': '의견이 삭제 되었습니다.', 'success': "성공"})
